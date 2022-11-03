@@ -27,7 +27,7 @@ class _DetailPageState extends State<DetailPage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: 15,
+              height: 45,
             ),
             const Text(
               "Tour of Heroes",
@@ -56,10 +56,7 @@ class _DetailPageState extends State<DetailPage> {
                         overlayColor: MaterialStateColor.resolveWith(
                             (states) => const Color.fromARGB(255, 5, 42, 105))),
                     onPressed: () {
-                      //log("presss");
-                      // setState(() {
-                      //   tempcontainer = container1;
-                      // });
+                      Navigator.pop(context);
                     },
                     child: const Text(
                       "Dashboard",
@@ -81,12 +78,15 @@ class _DetailPageState extends State<DetailPage> {
                             const Color.fromARGB(255, 189, 182, 182)),
                         overlayColor: MaterialStateColor.resolveWith(
                             (states) => const Color.fromARGB(255, 5, 42, 105))),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     child: const Text(
                       "Heros",
                     )),
               ],
             ),
+
             // Container(
             //   height: 30,
             //   width: MediaQuery.of(context).size.width * 0.6,
